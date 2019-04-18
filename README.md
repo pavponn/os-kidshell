@@ -7,7 +7,7 @@ This is an educational project, aimed at understanding how to interact with a PO
 * Limited environment variables support
 * Built-in commands: export, unset, exit
 
-### Environmental variables
+### Environmental Variables
 `export` or `export -p` or `env` - show all environmental variables
 
 `export VAR1=VALUE1 VAR2=VALUE2 ...` - export variable (multiple variables)
