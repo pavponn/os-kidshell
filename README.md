@@ -1,29 +1,11 @@
-# Необходимо создать игрушечный интерпретатор.
+# Kidshell
+Kidshell is a simple POSIX shell, written in C++.
+This is an educational project, aimed at understanding how to interact with a POSIX-compatible API to launch child processes.
 
-## Цель - получить представление о том, как работают командные интерпретаторы.
-
-Программа должна в бесконечном цикле считывать с stdin полный путь к
-исполняемому файлу, который необходимо запустить и аргументы запуска.
-Дождавшись завершения процесса необходимо вывести на stdout код его завершения.
-
-Необходимо использовать прямые системные вызовы для порождения новых процессов,
-запуска новых исполняемых файлов и получения статуса завершения процесса.
-Все возвращаемые значения системных вызовов должны быть проверены и в случае
-обнаружения ошибок необходимо выводить текстовое описание ошибки.
-
-На входе могут быть некорректные данные.
-
-Дополнительные баллы - поддержка переменных окружения.
-
-Язык имплементации - C или C++.
-
-### Build
-```
-$ mkdir build
-$ cd build
-$ cmake ..
-$ make
-```
+## Main Features
+* Basic executable launch and wrapping
+* Limited environment variables support
+* Built-in commands: export, unset, exit
 
 ### Environmental variables
 `export` or `export -p` or `env` - show all environmental variables
@@ -31,6 +13,26 @@ $ make
 `export VAR1=VALUE1 VAR2=VALUE2 ...` - export variable (multiple variables)
 
 `unset VAR1 VAR2 ...`  - unset variable (multiple variables)
+
+## 
+
+## Build
+```
+$ mkdir build
+$ cd build
+$ cmake ..
+$ make
+```
+Requires C++11 compiler
+
+## Test
+Tested manually on macOS Mojave 10.14.3 and Linux 4.12.
+
+## Copyright
+Pavel Ponomarev, 2019 (pavponn@gmail.com)
+MIT License.
+
+
 
 
 
